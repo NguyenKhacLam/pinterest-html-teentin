@@ -1,0 +1,145 @@
+@import "var";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#header {
+  background-color: $dark-blue;
+  padding: 5px 0;
+  .header__content {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    .header__logo {
+      img {
+        width: 150px;
+      }
+    }
+  }
+  .header__menuItem {
+    a {
+      color: $white;
+      text-decoration: none;
+      transition: 0.3s;
+      &:hover {
+        color: yellow;
+      }
+      i {
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+.modal {
+  .modal-body {
+    #uploadForm {
+      h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      p {
+        i {
+          font-size: 40px;
+        }
+      }
+      input,
+      textarea {
+        @include input;
+      }
+      .submit-btn {
+        @include button;
+        padding: 5px 25px;
+      }
+    }
+  }
+}
+
+.gallery {
+  margin: 30px auto;
+  .grid {
+    margin: 0 auto;
+    column-count: 4;
+  }
+  .grid-item {
+    margin-bottom: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    img {
+      width: 100%;
+      transition: all 0.3s;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.image-modal {
+  background-color: $fadeBlack;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.25s ease-out;
+
+  .full-image {
+    position: absolute;
+    height: 70%;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%) scale(0.5);
+    transition: all 0.25s ease-out;
+  }
+
+  .full-image.open {
+    transform: translate(-50%, -10%) scale(1);
+  }
+
+  .content {
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    width: 80%;
+    color: $white;
+    h2 {
+      font-size: 20px;
+    }
+  }
+}
+
+.image-modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+// Media
+@media (max-width: 800px) {
+  .gallery {
+    .grid {
+      column-count: 3;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    .grid {
+      column-count: 2;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .gallery {
+    .grid {
+      column-count: 1;
+    }
+  }
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teentin</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="header__content container">
+        <div class="header__menuItem">
+          <a href="#"> <i class="fas fa-chevron-left"></i> Trang chủ </a>
+        </div>
+        <a href="#" class="header__logo">
+          <img src="./assets/images/logo-black.jpg" alt="logo" />
+        </a>
+        <div class="header__menuItem">
+          <a href="" data-toggle="modal" data-target="#uploadImg">
+            <i class="fas fa-upload"></i>
+            Đăng ảnh
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- End header -->
+
+    <div class="container gallery">
+      <div class="grid">
+        <div class="grid-item">
+          <img
+            src="./assets/images/massory/2.jpg"
+            alt=""
+            data-title="title"
+            data-description="description"
+            data-original="./assets/images/massory/2.jpg"
+          />
+        </div>
+        <div class="grid-item">
+          <img
+            src="./assets/images/massory/14.jpg"
+            alt=""
+            data-title="title"
+            data-description="description"
+            data-original="./assets/images/massory//14.jpg"
+          />
+        </div>
+        <div class="grid-item">
+          <img
+            src="./assets/images/massory/5.jpg"
+            alt=""
+            data-title="title"
+            data-description="description"
+            data-original="./assets/images/massory/5.jpg"
+          />
+        </div>
+        <div class="grid-item">
+          <img
+            src="./assets/images/massory/8.jpg"
+            alt=""
+            data-title="title"
+            data-description="description"
+            data-original="./assets/images/massory/8.jpg"
+          />
+        </div>
+        <div class="grid-item">
+          <img
+            src="./assets/images/massory/7.jpg"
+            alt=""
+            data-title="title"
+            data-description="description"
+            data-original="./assets/images/massory/7.jpg"
+          />
+        </div>
+        <div class="grid-item">
+          <img
+            src="./assets/images/massory/9.jpg"
+            alt=""
+            data-title="title"
+            data-description="description"
+            data-original="./assets/images/massory/9.jpg"
+          />
+        </div>
+        <div class="grid-item">
+          <img
+            src="./assets/images/massory/1.jpg"
+            alt=""
+            data-title="title"
+            data-description="description"
+            data-original="./assets/images/massory/1.jpg"
+          />
+        </div>
+        <div class="grid-item">
+          <img
+            src="./assets/images/massory/3.jpg"
+            alt=""
+            data-title="title"
+            data-description="description"
+            data-original="./assets/images/massory/3.jpg"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="image-modal">
+      <img src="./assets/images/massory/2.jpg" alt="" class="full-image" />
+      <div class="content">
+        <h2 class="title"></h2>
+        <p class="desciption"></p>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="uploadImg"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Đăng ảnh</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="" id="uploadForm">
+              <div class="form-group">
+                <label for="title">Tiêu đề</label>
+                <input type="text" class="form-control" name="title" />
+              </div>
+              <div class="form-group">
+                <label for="desciption">Mô tả ngắn</label>
+                <textarea
+                  class="form-control"
+                  name="desciption"
+                  rows="10"
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="upload"
+                  ><i class="fas fa-download"></i> Chọn ảnh</label
+                >
+                <input type="file" name="upload" />
+              </div>
+              <!-- <button type="button" class="selectImg-btn">Chọn ảnh</button> -->
+
+              <button type="submit" class="submit-btn">Đăng</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
